@@ -1,0 +1,74 @@
+data = {
+  "owedFromItems": [
+    {
+      "isLender": false,
+      "otherPartyName": "John-Doe",
+      "startDate": "2018-03-12T13:37:27+00:00",
+      "dueDate": "2018-06-06T13:37:27+00:00",
+      "hasInterest": true,
+      "interest":
+        {"rate": 0.1,
+         "timeAccrued": "day",
+         "isCompounded": true
+        },
+      "collateral": "Take-him-on-a-date",
+      "principal": 4.00
+    },
+    {
+      "isLender": false,
+      "otherPartyName": "Hally-Berry",
+      "startDate": "2018-03-12T13:37:27+00:00",
+      "dueDate": "2018-06-15T13:37:27+00:00",
+      "hasInterest": true,
+      "interest":
+        {"rate": 0.1,
+         "timeAccrued": "day",
+         "isCompounded": false
+        },
+      "collateral": "Take-him-on-a-date",
+      "principal": 4.00
+    },
+    {
+      "isLender": false,
+      "otherPartyName": "Chris-Cross",
+      "startDate": "2018-03-12T13:37:27+00:00",
+      "dueDate": "2018-06-08T13:37:27+00:00",
+      "hasInterest": true,
+      "interest":
+        {"rate": 0.1,
+         "timeAccrued": "day",
+         "isCompounded": false
+        },
+      "collateral": "Take-him-on-a-date",
+      "principal": 4.00
+  },
+  {
+    "isLender": true,
+    "otherPartyName": "Billy-Kidd",
+    "startDate": "2018-03-12T13:37:27+00:00",
+    "dueDate": "2018-06-17T13:37:27+00:00",
+    "hasInterest": true,
+    "interest":
+      {"rate": 0.1,
+       "timeAccrued": "day",
+       "isCompounded": true
+      },
+    "collateral": "Take-him-on-a-date",
+    "principal": 4.00
+  },
+  {
+    "isLender": false,
+    "otherPartyName": "Dave-Rothschild",
+    "startDate": "2018-03-12T13:37:27+00:00",
+    "dueDate": "2018-06-10T13:37:27+00:00",
+    "hasInterest": true,
+    "interest":
+      {"rate": 0.1,
+       "timeAccrued": "day",
+       "isCompounded": true
+      },
+    "collateral": "Take-him-on-a-date",
+    "principal": 4.00
+  }
+  ]
+}

@@ -1,0 +1,200 @@
+body {
+  font-family: "consolas";
+  color: white;
+  background-color: #12005e;
+}
+#topBar {
+  background-color: blue;
+  color: white;
+  /*position: fixed;*/
+  vertical-align: top;
+  height: 25px;
+  width: 100%;
+  text-align: center;
+  /*z-index: 1;*/
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-left: 20%;
+}
+
+#summaryStats {
+  grid-area: summary;
+}
+
+#debtItemsContainer {
+  grid-area: debt;
+}
+
+#owedItemsContainer {
+  grid-area: owed;
+}
+#topBar2 {
+
+  background-color: #4a148c;
+  text-align:center;
+  color: white;
+  /*position: fixed;*/
+  grid-area: header;
+}
+/*#leftBar {
+  background-color: cyan;
+  color: black;
+  position: fixed;
+  vertical-align: top;
+  height: 25px;
+  width: 100px;
+  height: 100%;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  float: left;
+}*/
+
+/*.modal {
+  z-index: 1;
+  position: fixed;
+  background-color: rgba(0,0,0,0.75);
+  color: white;
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  padding-top: 10%;
+  align: center;
+  text-align:center;
+}*/
+
+#modalClose {
+  grid-area: close;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 'header header header'
+                       'summary owed owed'
+                       'summary debt debt';
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+
+}
+
+.modal {
+  z-index: 1;
+  position: fixed;
+  background-color: rgba(0,0,0,0.75);
+  color: white;
+  display: none;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  align: left;
+  text-align: left;
+  justify-content: flex-start;
+  padding-left: 10%;
+  text-overflow: auto;
+  font-size: 1.1em;
+}
+
+form {
+  font-size: 0.8em;
+}
+#modalClose {
+  float: center;
+  padding: 0.45%;
+}
+
+.modalContent {
+  float: left;
+  text-align: left;
+}
+
+.ui-widget {
+  float:center;
+}
+
+.formField .hasDatepicker {
+  float: center;
+}
+.oweItem, tr {
+  width: 100%;
+  background-color:  #4a148c;
+  margin: 5px;
+  height: 30px;
+  padding-top: 2px;
+}
+
+td{
+  margin: 2px;
+}
+.oweItem:hover{
+background-color: black;
+}
+
+.remove {
+  width: 20%;
+  background-color: #B00020;
+  color:white;
+  text-decoration-style: dashed;
+  float: right;
+  text-align: center;
+  height: 100%;
+}
+
+.remove:hover {
+  width: 20%;
+  background-color:black;
+  color:white;
+  text-decoration-style: dashed;
+}
+
+.dueDateDsp {
+  width: 20%;
+  float: left;
+}
+
+.otherPartyNameDsp {
+    width: 50%;
+    margin-right: 10px;
+}
+
+.principleDsp {
+  width: 15%;
+  margin-right: 10px;
+}
+
+.daysLeftDsp {
+  width: 15%;
+  float: center;
+  margin-right: 10px;
+
+}
+
+.itemListDsp {
+  width: 80%
+}
+
+button {
+    background-color:  #4a148c;
+    color: white;
+    border: 4px solid rgba(0,0,0,0.3); /* Green */
+}
+
+button:hover {
+  background-color: black;
+}
+
+#addNewOweItemBtn {
+  float:center;
+  height: 100px;
+  width: 100px;
+}
+
+.formField, input {
+  margin: 5px;
+}
+
+#startDateContainer:hover, #dueDateContainer:hover {
+  color: yellow;
+}

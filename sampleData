@@ -1,0 +1,14 @@
+{
+owedTo: true/false,
+owedFrom: true/false,
+otherPartyName: string,
+startDate: Date object,
+dueDate: Date object,
+hasInterest: true/false,
+interest:
+  {rate: decimal value,
+   timeCompounded: |day|week|month
+  },
+collateral: Long Text,
+principal: 4.00
+}

@@ -1,0 +1,125 @@
+<!--Joseph Varilla
+6/2/18
+OweKnowe
+An App to keep track of loans-->
+<!DOCTYPE>
+<html>
+<head>
+  <title>OweKnowe</title>
+  <link rel="stylesheet" href="style.css"></link>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+  <script type="text/javascript" src="sampleData.json"></script>
+  <script type="text/javascript"
+  	src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+  </script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous">
+  </script>
+  <script src = "oweItemsClass.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+<div class = "modal">
+    <div id="modalClose"><button><h2 id="pcBtn">&nbsp;&nbsp;X&nbsp;&nbsp;</h2></button></div>
+    <div class = "modalContent"></div>
+    <button id="removeOweItemBtn"><h3>Remove This Item<h3></button>
+    <div id = "addNewItemFormContainer">
+      <form id = "addNewItemForm">
+        <h2>Add Loan</h2>
+        <div id="errorDsp"></div>
+
+        <div class="formField" id = "lenderChoicesContainer">
+          My Role In Loan:
+          <input id = "isLenderInput" type="radio" name="isLender" value="true">Lender</input>
+          <input id = "isBorrowerInput" type="radio" name="isLender" value="false">Borrower</input>
+        </div>
+        <div class ="formField" id="otherPartyNameContainer">
+          Who is the other party in the loan
+          <input type="text" id="otherPartyNameInput" name="otherPartyName"/>
+        </div>
+        <div class ="formField" id="moneyInfoContainer">
+          Amount (Principal) of Loan: $
+          <input type="number" id="principalInput" name="principal"/>
+          <br/>
+          Does the loan have interest:
+          <input id="hasInterestInput" name="hasInterest" type="checkbox" />
+          <div id="interestInfoContainer"  hidden="true">
+            Interest Rate (as whole number) E.g:10 for 10%):<br/>
+            <input type="number" id="interestRateInput" name="interestRate"/><br/>
+            Accrues Every:
+            <select id="timeAccruedInput" name="timeAccrued">
+              <option value="day">Daily</option>
+              <option value="week">Weekly</option>
+              <option value="month">Monthly</option>
+            </select><br/>
+            Interest Is Compounded
+            <input id="isCompoundedInput" name="isCompounded" type="checkbox" />
+          </div>
+        </div>
+        <div class ="formField" id="collateralContainer">
+          Collateral:
+          <input type="textarea" id="collateralInput" name="collateral" rows="4" cols="50"/>
+        </div>
+        <div id="startDateContainer">
+          <label id="startDateLabel" for="startDateInput">Enter Start Date > </label>
+          <div class ="formField" id="startDateInput" name="startDate" hidden="true">
+          </div>
+        </div>
+        <div id="dueDateContainer">
+          <label id="dueDateLabel" for="dueDateInput">Enter Due Date > </label>
+          <div class ="formField" id="dueDateInput" name="dueDate" hidden="true">
+          </div>
+        </div>
+      </form>
+      <button id="addOweItemSubmitBtn"><h3>Add Loan</h3></button>
+    </div>
+    <br>
+
+  </div>
+<div class="grid-container">
+  <div id="topBar2" style="">
+    <span><h1>OweKnowe</h1><p>by Joseph Varilla</p></span>
+  </div>
+  <!--<div id="leftBar">Kill</div>-->
+  <div id= "summaryStats">
+    <h1>Summary</h1>
+    <table id="summaryTable">
+      <tr>
+        <td>Total In Debt</td>
+        <td id = "dspDebtAmount">...</td>
+      </tr>
+      <tr>
+        <td>Number of Debts Overdue To Others</td>
+        <td id = "dspNumDebtOverdue">...</td>
+      </tr>
+      <tr>
+        <td>Total I'm Owed</td>
+        <td id = "dspOwedAmount">...</td>
+      </tr>
+      <tr>
+        <td>Number of Debts Overdue To Me</td>
+        <td id = "dspNumOwedOverdue">...</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="owedItemsContainer">
+    <h1>People Who Owe Me</h1>
+    <div id="owedFromItemsDsp">
+
+    </div>
+  </div>
+
+  <div id="debtItemsContainer">
+    <h1>People I Owe</h1>
+    <div id="owedToItemsDsp">
+    </div>
+  </div>
+</div>
+<button id="addNewOweItemBtn"><h3>+Add A Loan</h3></button>
+
+
+</body>
+</html>
